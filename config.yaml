@@ -1,0 +1,26 @@
+project:
+  output_dir: outputs
+
+classifier:
+  checkpoint: artifacts/best_accident_cnn.pt
+  input_size: 224
+  classify_every_n_frames: 2
+  smoothing_window: 12
+  frame_positive_threshold: 0.60
+  accident_on_threshold: 0.70
+  accident_off_threshold: 0.45
+  minimum_positive_predictions: 5
+
+tracking:
+  detector_model: yolo11n.pt
+  tracker: bytetrack.yaml
+  confidence: 0.30
+  iou_threshold: 0.50
+  vehicle_classes: [2, 3, 5, 7]
+  history_length: 300
+
+incident:
+  cooldown_frames: 150
+  minimum_pair_score: 0.20
+  path_thickness: 3
+  show_all_tracks: true
