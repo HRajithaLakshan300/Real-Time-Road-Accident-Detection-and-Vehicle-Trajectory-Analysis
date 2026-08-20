@@ -1,0 +1,2 @@
+# Real-Time-Road-Accident-Detection-and-Vehicle-Trajectory-Analysis
+real-time computer vision system to detect road accidents from webcam streams and uploaded  traffic videos.  Using YOLO and ByteTrack to detect vehicles, assign unique tracking IDs, and follow their movement across  consecutive video frames. Training a CNN-based accident classification model using labelled accident and non-accident CCTV images. 
